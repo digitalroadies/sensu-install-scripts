@@ -8,6 +8,7 @@
 #   3. Run the script to install Sensu client with given parameters.  
 #
 #   Copyright 2014 Cybercom Finland Oy
+#   Forked and modifed 2015 Eric L. Santelices
 #==================================================================================
 
 SENSU_VERSION="latest"
@@ -91,7 +92,7 @@ while [ "$1" != "" ]; do
 done
 
 # Direct script output and errors into console and into a file 
-exec &> >(tee -a /tmp/SensuClientInstall.log) 
+exec 2>&1 | tee -a /tmp/SensuClientInstall.log
 
 system=unknown
 if [ -f /etc/redhat-release ]; then
