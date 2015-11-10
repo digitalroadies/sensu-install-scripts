@@ -334,6 +334,10 @@ Get_Plugins()
     Run_Command "wget -O /etc/sensu/plugins/check-procs.rb $github_plugins/processes/check-procs.rb"
     Run_Command "wget -O /etc/sensu/plugins/check-tail.rb $github_plugins/files/check-tail.rb"
     Run_Command "wget -O /etc/sensu/plugins/check-cpu.rb $github_plugins/system/check-cpu.rb"
+    Run_Command "wget -O /etc/sensu/plugins/check-haproxy.rb $github_plugins/hproxy/check-haproxy.rb"
+    Run_Command "wget -O /etc/sensu/plugins/haproxy-metrics.rb $github_plugins/hproxy/haproxy-metrics.rb"
+    Run_Command "wget -O /etc/sensu/plugins/check_php-fpm.rb $github_plugins/php-fpm/check_php-fpm.rb"
+    Run_Command "wget -O /etc/sensu/plugins/php-fpm-metrics.rb $github_plugins/php-fpm/php-fpm-metrics.rb"
     Run_Command "chmod ugo+rx /etc/sensu/plugins/*"
 
     if [ "$SENSU_SSL_MODE" == "ON" ]; then
