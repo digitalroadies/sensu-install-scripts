@@ -14,13 +14,13 @@
 SENSU_VERSION="latest"
 
 # Cloud type: cybercom, AWS, ...
-CLIENT_CLOUD_TYPE="cybercom"
+CLIENT_CLOUD_TYPE="aws"
 
 # Possibility to set SSL ON or OFF
 # SSL mode on/off
 #
 # Currently SSL is not used
-export SENSU_SSL_MODE="OFF"
+export SENSU_SSL_MODE="ON"
 
 # Parameters for running the installation script.
 # Please check that these are up to date and update them if needed.
@@ -320,7 +320,7 @@ END
 
 Get_Plugins()
 {
-    github_plugins="https://raw.githubusercontent.com/cybercom-finland/sensu-community-plugins/master/plugins"
+    github_plugins="https://github.com/sensu/sensu-community-plugins/tree/master/plugins"
 
     echo ""
     echo "=============================================================="
